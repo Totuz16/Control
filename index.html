@@ -194,6 +194,8 @@ $('#file').onchange=e=>{if(e.target.files[0])restaurar(e.target.files[0]);e.targ
 (async()=>{
   db=await openDB();await load();render();
   if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();
-  if('serviceWorker' in navigator)navigator.serviceWorker.register('mod.js');
+  if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
 })();
-</script></body></html>
+</script>
+<script src="mod.js"></script>
+<body></body></html>
